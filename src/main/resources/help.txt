@@ -1,0 +1,1 @@
+CharacterSetConver  -s sourcePath  -sc sourceCharSet - t targetPath  -tc targetCharSet
