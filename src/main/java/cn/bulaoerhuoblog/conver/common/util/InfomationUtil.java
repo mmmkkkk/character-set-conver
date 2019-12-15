@@ -19,5 +19,7 @@ public class InfomationUtil {
         System.out.println("输入以下命令获得提示:");
         System.out.println("java CharacterSetConver -help");
     }
+
+
 }
 
