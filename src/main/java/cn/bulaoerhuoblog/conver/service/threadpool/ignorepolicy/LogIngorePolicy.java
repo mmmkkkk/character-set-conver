@@ -21,8 +21,10 @@ import java.util.concurrent.ThreadPoolExecutor;
 public class LogIngorePolicy implements RejectedExecutionHandler {
     @Override
     public void rejectedExecution(Runnable r, ThreadPoolExecutor executor) {
+        if (!executor.isShutdown()) {
+            r.run();
+        }
         doLog(r);
-
     }
 
     private void doLog(Runnable r){

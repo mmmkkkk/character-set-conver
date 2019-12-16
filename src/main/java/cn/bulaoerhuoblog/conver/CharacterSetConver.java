@@ -13,10 +13,10 @@ import cn.bulaoerhuoblog.conver.common.util.InfomationUtil;
 import cn.bulaoerhuoblog.conver.common.util.ThreadPoolUtil;
 import cn.bulaoerhuoblog.conver.service.agrsparsing.ArgsParsingImpl;
 import cn.bulaoerhuoblog.conver.service.conver.CharsetConver;
-import cn.bulaoerhuoblog.conver.service.threadpool.task.FileSerach;
 
 import java.io.File;
 import java.util.Arrays;
+import java.util.concurrent.LinkedBlockingQueue;
 import java.util.concurrent.ThreadPoolExecutor;
 
 /**
@@ -53,14 +53,20 @@ public class CharacterSetConver {
         // 处理文件
         ThreadPoolExecutor service = ThreadPoolUtil.getDefaultThreadPool();
         File sourceFile = new File(arguments.getSourcePath());
-        service.execute(new FileSerach(sourceFile, arguments, service, new CharsetConver()));
+        LinkedBlockingQueue<File> tasks = new LinkedBlockingQueue<File> ();
+        tasks.add(sourceFile);
+        ThreadPoolUtil.batch(service,tasks,arguments,new CharsetConver());
 
-        while (!service.isTerminating()) {
-            if (service.getActiveCount() == 0) {
-                service.shutdown();
+        while (tasks.size() != 0) {
+            try {
+                Thread.sleep(1000);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
             }
         }
+        service.shutdown();
     }
+
 
 
 }

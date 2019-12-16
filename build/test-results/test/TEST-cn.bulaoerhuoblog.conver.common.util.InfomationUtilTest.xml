@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="cn.bulaoerhuoblog.conver.common.util.InfomationUtilTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2019-12-16T15:14:08" hostname="makun" time="0.023">
+  <properties/>
+  <testcase name="helpInfo()" classname="cn.bulaoerhuoblog.conver.common.util.InfomationUtilTest" time="0.021"/>
+  <testcase name="printHelpCommand()" classname="cn.bulaoerhuoblog.conver.common.util.InfomationUtilTest" time="0.001"/>
+  <system-out><![CDATA[CharacterSetConver  -s sourcePath  -sc sourceCharSet - t targetPath  -tc targetCharSet
+-s 源目录
+-t 目标目录
+-sc 源编码
+-ts 目标编码
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

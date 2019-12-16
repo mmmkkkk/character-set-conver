@@ -16,6 +16,7 @@ package cn.bulaoerhuoblog.conver.constant;
  * @since V0.0.1
  */
 public class ThreadPoolConsts {
-    public static final int CORE_THREAD_NUM = 100;
+    public static final int CORE_THREAD_NUM = 10;
+    public static final int MAX_TASK = 15;
 }
 

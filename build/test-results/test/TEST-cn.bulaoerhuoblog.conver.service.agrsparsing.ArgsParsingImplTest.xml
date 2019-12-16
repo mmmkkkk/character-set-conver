@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="cn.bulaoerhuoblog.conver.service.agrsparsing.ArgsParsingImplTest" tests="7" skipped="0" failures="0" errors="0" timestamp="2019-12-16T14:28:13" hostname="makun" time="0.015">
+<testsuite name="cn.bulaoerhuoblog.conver.service.agrsparsing.ArgsParsingImplTest" tests="7" skipped="0" failures="0" errors="0" timestamp="2019-12-16T15:14:08" hostname="makun" time="0.016">
   <properties/>
   <testcase name="parseArgs()" classname="cn.bulaoerhuoblog.conver.service.agrsparsing.ArgsParsingImplTest" time="0.004"/>
   <testcase name="parseArgsUnknownArgs()" classname="cn.bulaoerhuoblog.conver.service.agrsparsing.ArgsParsingImplTest" time="0.004"/>
-  <testcase name="parseArgsRequiredCheck()" classname="cn.bulaoerhuoblog.conver.service.agrsparsing.ArgsParsingImplTest" time="0.0"/>
-  <testcase name="parseArgsZeroLength()" classname="cn.bulaoerhuoblog.conver.service.agrsparsing.ArgsParsingImplTest" time="0.001"/>
+  <testcase name="parseArgsRequiredCheck()" classname="cn.bulaoerhuoblog.conver.service.agrsparsing.ArgsParsingImplTest" time="0.001"/>
+  <testcase name="parseArgsZeroLength()" classname="cn.bulaoerhuoblog.conver.service.agrsparsing.ArgsParsingImplTest" time="0.0"/>
   <testcase name="parseArgsHelp()" classname="cn.bulaoerhuoblog.conver.service.agrsparsing.ArgsParsingImplTest" time="0.001"/>
-  <testcase name="parseArgsNull()" classname="cn.bulaoerhuoblog.conver.service.agrsparsing.ArgsParsingImplTest" time="0.001"/>
-  <testcase name="parseArgsPrefix()" classname="cn.bulaoerhuoblog.conver.service.agrsparsing.ArgsParsingImplTest" time="0.0"/>
+  <testcase name="parseArgsNull()" classname="cn.bulaoerhuoblog.conver.service.agrsparsing.ArgsParsingImplTest" time="0.0"/>
+  <testcase name="parseArgsPrefix()" classname="cn.bulaoerhuoblog.conver.service.agrsparsing.ArgsParsingImplTest" time="0.001"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

@@ -40,26 +40,7 @@ public class FileSerach extends Thread {
 
     @Override
     public void run() {
-        if (filePath.isDirectory()) {
-            for (File file : filePath.listFiles()) {
-                // 如果是目录，添加到队列
-                if (filePath.isDirectory()) {
-                    if (service.getActiveCount() > ThreadPoolConsts.CORE_THREAD_NUM) {
-                        try {
-                            Thread.sleep(1000);
-                        } catch (InterruptedException e) {
-                            e.printStackTrace();
-                        }
-                    }
-                    service.execute(new FileSerach(file, arg, service, conver));
-                } else {
-                    // 如果是文件，转换
-                    System.out.println("文件: " + filePath.getAbsoluteFile() + "strt");
-                    conver.convert(arg, filePath);
-                    System.out.println("文件: " + filePath.getAbsoluteFile() + "end");
-                }
-            }
-        } else {
+        if (filePath.isFile()) {
             // 如果是文件，转换
             System.out.println("文件: " + filePath.getAbsoluteFile());
             conver.convert(arg, filePath);

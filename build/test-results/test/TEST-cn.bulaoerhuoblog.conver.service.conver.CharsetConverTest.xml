@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="cn.bulaoerhuoblog.conver.service.conver.CharsetConverTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2019-12-16T14:28:13" hostname="makun" time="0.004">
+<testsuite name="cn.bulaoerhuoblog.conver.service.conver.CharsetConverTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2019-12-16T15:14:08" hostname="makun" time="0.007">
   <properties/>
-  <testcase name="convert()" classname="cn.bulaoerhuoblog.conver.service.conver.CharsetConverTest" time="0.004"/>
+  <testcase name="convert()" classname="cn.bulaoerhuoblog.conver.service.conver.CharsetConverTest" time="0.007"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>
