@@ -1,0 +1,5 @@
+XCharacterSetConver  -s sourcePath  -sc sourceCharSet - t targetPath  -tc targetCharSet
+-s 源目录
+-t 目标目录
+-sc 源编码
+-ts 目标编码

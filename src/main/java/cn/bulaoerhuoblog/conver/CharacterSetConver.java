@@ -41,13 +41,13 @@ public class CharacterSetConver {
         // 解析参数
         Args arguments = argsParsing.parseArgs(args);
         // 解析结果判断
+        if (arguments.isHelp()) {
+            InfomationUtil.helpInfo();
+            return;
+        }
         if (arguments.isError()) {
             InfomationUtil.printHelpCommand();
             return;
-        }
-
-        if (arguments.isHelp()) {
-            // TODO 2019/12/15 20:59 mk:帮助文档
         }
 
         // 处理文件
@@ -56,7 +56,6 @@ public class CharacterSetConver {
         service.execute(new FileSerach(sourceFile, arguments, service, new CharsetConver()));
 
         while (!service.isTerminating()) {
-            System.out.println("ActiveCount " + service.getActiveCount());
             if (service.getActiveCount() == 0) {
                 service.shutdown();
             }

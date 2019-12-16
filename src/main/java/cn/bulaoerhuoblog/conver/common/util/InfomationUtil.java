@@ -7,6 +7,7 @@
  *************************************************/
 package cn.bulaoerhuoblog.conver.common.util;
 
+import java.io.*;
 /**
  * 可复用的提示信息输出
  * 常用提示信息的汇总
@@ -20,6 +21,29 @@ public class InfomationUtil {
         System.out.println("java CharacterSetConver -help");
     }
 
-
+    public static void helpInfo() {
+        BufferedReader br = null;
+        try {
+            br = new BufferedReader(new InputStreamReader(InfomationUtil.class.getClassLoader().getResourceAsStream("help/help.txt"), "UTF-8"));
+            String line = null;
+            while (null != (line = br.readLine())) {
+                System.out.println(line);
+            }
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        } catch (UnsupportedEncodingException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        } finally {
+            if (null != br) {
+                try {
+                    br.close();
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            }
+        }
+    }
 }
 
